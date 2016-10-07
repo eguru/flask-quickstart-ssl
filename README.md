@@ -50,19 +50,19 @@ pip install flask_admin
 Generate private key:
 
 ```
-openssl genrsa -out server.key 1024
+openssl genrsa -out res/server.key 1024
 ```
 
 Generate Certificate Signing Request (CSR):
 
 ```
-openssl req -new -key server.key -out server.csr
+openssl req -new -key res/server.key -out res/server.csr
 ```
 
 Generate Self-Signed certificate:
 
 ```
-openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+openssl x509 -req -days 365 -in res/server.csr -signkey res/server.key -out res/server.crt
 ```
 
 see [this](http://anubhav83.in/2016/10/07/webrtc-serve-localhost-https/) blog for more details.
