@@ -1,6 +1,6 @@
 # Flask Quickstart With SSL Enabled
 
-The Quickstart project provide a quick setup to a dummy project that has a database and admin panel that is running over HTTPS. This project only gives bare minimum code required to get started.
+The Quickstart project provide a quick setup to a dummy project that has a database and an admin panel, which is running over HTTPS. This project only gives bare minimum code required to get started.
 
 For other quickstart projects, refer to the following projects:
 
