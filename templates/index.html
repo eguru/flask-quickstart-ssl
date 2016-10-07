@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Flask - Database Quickstart</title>
+    <link href="/static/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Quickstart With Admin</h1>
+    <select name='months'>
+        {% for month in data.months %}
+            {% if month == data.month %}
+                <option value="{{month}}" selected>{{ month }} {{data.year}}</option>
+            {% else %}
+                <option value="{{month}}">{{ month }} {{data.year}}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <table name="month" border=1 cellpadding=3 cellspacing=3>
+        <thead>
+            <tr>
+                <td class='name'>&nbsp;</td>
+                {% for day in data.month_days %}
+                    <td>{{day}}</td>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee, leave_days in data.employee_leave_data.items() %}
+            <tr>
+                <td class="name">{{employee.name}}</td>
+                {% for day in data.month_days %}
+                    {% if day in leave_days%}
+                        <td class='leave'>L</td>
+                    {% else %}
+                        <td>&nbsp;</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

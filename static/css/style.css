@@ -1,0 +1,17 @@
+thead td {
+    text-align:center;
+    background-color:grey;
+    font-weight:bold;
+    width:20px;
+}
+
+.name {
+    width: 150px;
+}
+
+.leave {
+    text-align:center;
+    font-weight:bold;
+    background-color:red;
+    color:#ffffff
+}

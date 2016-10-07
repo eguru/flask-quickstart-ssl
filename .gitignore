@@ -1,0 +1,5 @@
+venv/
+*.pyc
+*.crt
+*.csr
+*.key
